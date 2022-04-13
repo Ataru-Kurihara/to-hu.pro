@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+#  django:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    tty: true
+#    volumes:
+#      - ./mysite:/mysite
+#      - C:/Users/ataru/AppData/Roaming/.minecraft/versions/1.8.9-forge1.8.9-11.15.1.1722/saves/test:/minecraft
+#    ports:
+#      - 8881:8881
+#    environment:
+#      - PYTHONUNBUFFERED=1
+#    command: python manage.py runserver 0.0.0.0:8881
+  start:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./main:/main
+      - C:/Users/ataru/AppData/Roaming/.minecraft/versions/1.8.9-forge1.8.9-11.15.1.1722/saves/test:/minecraft
+
+    ports:
+      - 8881:8881
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python manage.py runserver 0.0.0.0:8881
+
+
+
