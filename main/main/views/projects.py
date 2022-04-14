@@ -9,6 +9,6 @@ class Projects(APIView):
     def get(self, request, *args, **kargs):
         files = glob.glob("/minecraft/computer/*[!lastid.txt]", recursive=True)
         data = {
-            'date': files
+            'files': files
         }
         return Response(data)

@@ -19,7 +19,7 @@ class Project(APIView):
                 'response': {
                     'id': project_id,
                     'path': files,
-                    'data': file
+                    'code': file
                 }
             }
             return Response(data)
