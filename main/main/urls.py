@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from .views import Projects, Project
+from .views import Files, File, Projects
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects/', Projects.as_view(), name='projects'),
-    path('projects/<int:id>', Project.as_view(), name='project')
+    path('files/', Files.as_view(), name='files'),
+    path('files/<int:dir_id>', File.as_view(), name='file'),
+    path('files/<int:dir_id>/<str:folder_name>', Projects.as_view(), name='projects'),
 ]

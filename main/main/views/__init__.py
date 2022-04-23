@@ -1,7 +1,10 @@
-from .project import Project
+from .file import File
+from .files import Files
 from .projects import Projects
 
+
 __all__ = [
-    Projects,
-    Project
+    Files,
+    File,
+    Projects
 ]
